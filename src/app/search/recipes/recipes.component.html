@@ -1,0 +1,22 @@
+<div>
+  <p>Wpisz składnik:</p>
+  <input type="text" name="i" [ngModel]="i" (ngModelChange)="i=$event" placeholder="Wpisz składnik">
+  <p>Wpisz nazwę potrawy:</p>
+  <input type="text" name="q"  [ngModel]="q" (ngModelChange)="q=$event" placeholder="Wpisz nazwę potrawy">
+</div>
+
+<div style="margin-top: 20px;">
+  <button (click)="getRecipes()">Szukaj</button>
+</div>
+
+<div *ngIf="names.length > 0">
+  <div *ngFor="let el of names">
+    <ul>
+      <li>
+        <a href="{{ el.href }}">{{ el.name | json }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
