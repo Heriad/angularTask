@@ -1,0 +1,2 @@
+# angularTask
+Task na szkolenie
